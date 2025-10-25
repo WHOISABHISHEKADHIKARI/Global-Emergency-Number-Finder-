@@ -42,16 +42,16 @@ Add your live link: GitHub Pages / Vercel
 - Option 3 — VS Code Live Server: 
   - Open the folder in VS Code, install “Live Server”, then right-click `index.html` → “Open with Live Server”. 
  
-## 🌐 About Hashtag Web Solutions Nepal 
+## 🌐 About Hashtag Web Solution 
  
-Hashtag Web Solutions Nepal is a professional web development, SEO, and digital marketing agency based in Nepal. We build scalable websites, custom web tools, and AI-driven digital products that help businesses grow globally. Our mission is to make the web faster, smarter, and more human-centered. 
+Hashtag Web Solution is a professional web development, SEO, and digital marketing agency based in Nepal. We build scalable websites, custom web tools, and AI-driven digital products that help businesses grow globally. Our mission is to make the web faster, smarter, and more human-centered. 
  
 > Empowering Nepal’s digital future through innovation, creativity, and technology. 
  
 ### 🏢 Company Information 
 - Company Name: Hashtag Web Solution 
 - Location: Hetauda, Makwanpur, Nepal  
-- Email: info@hashtagwebsolutionsnepal.com  
+- Email: info@hashtagweb.com.no 
 - Website: `https://hashtagweb.com.np`   
 - Phone: +977-9823405140 
  
@@ -74,7 +74,7 @@ This repository is maintained by `https://github.com/hashtagsolution215-source.`
 For collaboration, PRs, or open-source contributions, feel free to connect or submit a pull request. 
  
 **Keywords:**  
-Hashtag Web Solutions Nepal • Web Development Nepal • Digital Marketing Nepal • SEO Agency Nepal • Web Tools • AI Development Nepal • Hashtag Solution 
+Hashtag Web Solutions  • Web Development Nepal • Digital Marketing Nepal • SEO Agency Nepal • Web Tools • AI Development Nepal • Hashtag Solution 
  
 ### ❤️ Support Our Mission 
 If you find our projects helpful, consider giving us a ⭐ on GitHub and following our socials.  
