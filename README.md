@@ -1,3 +1,5 @@
+ 
+
 # 🎯 Global Emergency Number Finder 
  
 A fast, free, and SEO-friendly web tool to find critical emergency numbers worldwide — Police, Ambulance, Fire, Women’s Helpline, Disaster/Rescue, Anti-Corruption (CIAA/Akhtiyar), and Embassy. Works fully offline in any modern browser, no API key required.
@@ -9,6 +11,22 @@ A fast, free, and SEO-friendly web tool to find critical emergency numbers world
 - Light/Dark theme toggle with persistence (`localStorage`) 
 - Fully offline dataset (`data.json`) with built-in fallback 
 - Accessible labels, ARIA live region for results 
+
+## 📸 Screenshots
+
+### Landing Page
+![Landing Page](./Asset/Landing%20Page%20.png)
+*Clean and intuitive interface with country search functionality*
+
+### Dark Mode
+![Dark Mode](./Asset/Dark%20mode%20.png)
+*Elegant dark theme for comfortable viewing*
+
+### Download Thumbnails
+![Download Thumbnails](./Asset/Downlaoding%20Thumbnails%20%20.png)
+*Easy-to-use download and copy features*
+
+> 🎨 **View Gallery**: Check out all screenshots in our [Preview Gallery](./preview-gallery.html)
  
 ## 🔧 How to Use 
 1. Type a country name (e.g., “Nepal”, “India”) or choose from the dropdown. 

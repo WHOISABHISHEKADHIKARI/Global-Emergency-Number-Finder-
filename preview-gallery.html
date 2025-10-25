@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Number Finder - Preview Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .image-info {
+            padding: 20px;
+        }
+
+        .image-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .image-description {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 Emergency Number Finder</h1>
+            <p>Preview Gallery - Application Screenshots</p>
+        </div>
+
+        <div class="gallery">
+            <div class="image-card">
+                <img src="./Asset/Landing Page .png" alt="Landing Page Screenshot">
+                <div class="image-info">
+                    <div class="image-title">🏠 Landing Page</div>
+                    <div class="image-description">
+                        The main interface of the Emergency Number Finder application showing the clean, user-friendly design with search functionality and emergency contact information.
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="./Asset/Dark mode .png" alt="Dark Mode Screenshot">
+                <div class="image-info">
+                    <div class="image-title">🌙 Dark Mode</div>
+                    <div class="image-description">
+                        The application in dark mode, providing a comfortable viewing experience in low-light conditions while maintaining excellent readability and accessibility.
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="./Asset/Downlaoding Thumbnails  .png" alt="Downloading Thumbnails Screenshot">
+                <div class="image-info">
+                    <div class="image-title">📥 Download Feature</div>
+                    <div class="image-description">
+                        Screenshot showing the download functionality and thumbnail generation feature, allowing users to save emergency contact information for offline access.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="./index.html" class="back-link">← Back to Emergency Number Finder</a>
+    </div>
+</body>
+</html>
