@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Emergency Number Finder | Worldwide Police & Ambulance Contacts</title>
+  <meta name="description" content="Find police, ambulance, fire, embassy and akhtiyar emergency numbers worldwide — offline and fast." />
+  <meta name="keywords" content="global emergency numbers, ambulance helpline, police number, embassy contact, akhtiyar number" />
+  <meta name="theme-color" content="#007BFF" />
+  <meta name="author" content="Abhishek Adhikari" />
+  <link rel="canonical" href="" />
+  <meta property="og:title" content="Global Emergency Number Finder" />
+  <meta property="og:description" content="Find police, ambulance, fire, embassy and akhtiyar emergency numbers worldwide — offline and fast." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Global Emergency Number Finder" />
+  <meta name="twitter:description" content="Find police, ambulance, fire, embassy and akhtiyar emergency numbers worldwide — offline and fast." />
+  <meta name="twitter:image" content="" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Global Emergency Number Finder",
+    "url": "",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "description": "Find police, ambulance, fire, embassy and akhtiyar emergency numbers worldwide — offline and fast.",
+    "creator": {
+      "@type": "Person",
+      "name": "Abhishek Adhikari",
+      "url": "https://github.com/WHOISABHISHEKADHIKARI"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand" aria-label="Site title">
+        <span class="logo" aria-hidden="true">🌍</span>
+        <span class="brand-text">Global Emergency Finder</span>
+      </div>
+      <button id="themeToggle" class="btn btn-icon" aria-label="Toggle dark mode" title="Toggle dark mode">🌓</button>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="search-section" aria-labelledby="searchTitle">
+      <h1 id="searchTitle">Global Emergency Finder</h1>
+      <div class="search-bar">
+        <label for="countryInput" class="search-label">Select or type a country</label>
+        <input id="countryInput" class="country-input" type="text" placeholder="Enter country name..." list="countryList" autocomplete="off" aria-describedby="searchHelp" />
+        <datalist id="countryList"></datalist>
+        <select id="countrySelect" class="country-select" aria-label="Choose a country"></select>
+        <button id="searchBtn" class="btn btn-primary" type="button">Find</button>
+      </div>
+      <p id="searchHelp" class="help-text">Type a country name and press Enter or click Find.</p>
+      <div class="popular-list" id="popularList" aria-label="Popular countries"></div>
+    </section>
+
+    <section id="resultsSection" class="results-section" aria-labelledby="resultsTitle">
+      <h2 id="resultsTitle" class="section-title">Result</h2>
+      <div id="result" class="result-card" role="region" aria-live="polite"></div>
+    </section>
+
+    <section class="disclaimer-section" aria-labelledby="disclaimerTitle">
+      <h2 id="disclaimerTitle" class="section-title">Offline Disclaimer</h2>
+      <p class="disclaimer">
+        This tool works fully offline. Numbers are for convenience and may vary by region or change over time. Always verify with official sources when possible.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>
+        Built by <strong>Abhishek Adhikari</strong> · <a href="https://github.com/WHOISABHISHEKADHIKARI" target="_blank" rel="noopener">GitHub</a>
+      </p>
+      <p class="small">© <span id="year"></span> <a href="https://hashtagweb.com.np" target="_blank" rel="noopener">Hashtag Web Solutions Nepal</a></p>
+     </div>
+  </footer>
+
+  <script src="./script.js?v=2" defer></script>
+</body>
+</html>
