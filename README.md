@@ -49,7 +49,7 @@ Hashtag Web Solutions Nepal is a professional web development, SEO, and digital 
 > Empowering Nepal’s digital future through innovation, creativity, and technology. 
  
 ### 🏢 Company Information 
-- Company Name: Hashtag Web Solutions Nepal  
+- Company Name: Hashtag Web Solution 
 - Location: Hetauda, Makwanpur, Nepal  
 - Email: info@hashtagwebsolutionsnepal.com  
 - Website: `https://hashtagweb.com.np`   
