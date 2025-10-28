@@ -40,43 +40,62 @@
   function renderCountry(country) {
     var container = $('result');
     container.innerHTML = '';
-    var card = document.createElement('div');
-    card.className = 'fade-in';
-
     if (!country) {
-      container.innerHTML = '<p class="value muted">Country not found. Try another name.</p>';
+      container.innerHTML = '<p class="text-muted">Country not found. Try another name.</p>';
       return;
     }
 
-    var grid = document.createElement('div');
-    grid.className = 'grid';
+    var card = document.createElement('div');
+    card.className = 'result-card fade-in';
 
-    function row(label, value) {
-      var r = document.createElement('div');
-      r.className = 'card-row';
-      var left = document.createElement('div'); left.className = 'label'; left.textContent = label;
-      var right = document.createElement('div'); right.className = 'row-actions';
-      var valEl = document.createElement('span'); valEl.className = 'value'; valEl.textContent = safeText(value);
-      var btn = document.createElement('button'); btn.className = 'btn'; btn.type = 'button'; btn.textContent = '📋 Copy';
-      btn.addEventListener('click', function() { copyToClipboard(value); });
-      right.appendChild(valEl); right.appendChild(btn);
-      r.appendChild(left); r.appendChild(right);
-      return r;
+    var name = document.createElement('div');
+    name.className = 'country-name';
+    name.textContent = country.country;
+    card.appendChild(name);
+
+    var grid = document.createElement('div');
+    grid.className = 'emergency-grid';
+
+  function makeItem(icon, label, value) {
+    var item = document.createElement('div');
+    item.className = 'emergency-item';
+
+      var type = document.createElement('div');
+      type.className = 'emergency-type';
+      var iconEl = document.createElement('span'); iconEl.setAttribute('aria-hidden', 'true'); iconEl.textContent = icon;
+      var labelEl = document.createElement('span'); labelEl.textContent = label;
+      type.appendChild(iconEl);
+      type.appendChild(labelEl);
+
+      var num = document.createElement('div');
+      num.className = 'emergency-number';
+      num.textContent = safeText(value);
+
+      var btn = document.createElement('button');
+      btn.className = 'btn btn-secondary copy-btn';
+      btn.type = 'button';
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', function() {
+        copyToClipboard(value);
+        var old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function(){ btn.textContent = old; }, 1200);
+      });
+
+      item.appendChild(type);
+      item.appendChild(num);
+      item.appendChild(btn);
+      return item;
     }
 
-    var header = document.createElement('div'); header.className = 'result-header';
-    var name = document.createElement('div'); name.className = 'country-name'; name.textContent = country.country;
-    header.appendChild(name);
+    grid.appendChild(makeItem('🚓', 'Police', country.police));
+    grid.appendChild(makeItem('🚑', 'Ambulance', country.ambulance));
+    grid.appendChild(makeItem('🔥', 'Fire', country.fire));
+    grid.appendChild(makeItem('👩', 'Women’s Helpline', country.women));
+    grid.appendChild(makeItem('🆘', 'Disaster/Rescue', country.disaster));
+    grid.appendChild(makeItem('🏛️', 'CIAA (Akhtiyar) / Anti-Corruption', country.akhtiyar));
+    grid.appendChild(makeItem('🏢', 'Embassy (Foreign Affairs)', country.embassy));
 
-    grid.appendChild(row('Police', country.police));
-    grid.appendChild(row('Ambulance', country.ambulance));
-    grid.appendChild(row('Fire', country.fire));
-    grid.appendChild(row("Women’s Helpline", country.women));
-    grid.appendChild(row('Disaster/Rescue', country.disaster));
- +    grid.appendChild(row('CIAA (Akhtiyar) / Anti-Corruption', country.akhtiyar));
-    grid.appendChild(row('Embassy (Foreign Affairs)', country.embassy));
-
-    card.appendChild(header);
     card.appendChild(grid);
     container.appendChild(card);
   }
@@ -99,6 +118,8 @@
         populateDatalist(FALLBACK_DATA);
         populateSelect(FALLBACK_DATA);
         populatePopular(["Nepal","India","United States","United Kingdom","Japan"]);
+        var help = $('searchHelp');
+        if (help) help.textContent = 'Offline mode: using built-in emergency numbers.';
         return FALLBACK_DATA;
       });
   }
@@ -164,9 +185,13 @@
   function copyToClipboard(text) {
     var val = String(text || '').trim();
     if (!val) return;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(val).catch(function(){ legacyCopy(val); });
-    } else {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(val).catch(function(){ legacyCopy(val); });
+      } else {
+        legacyCopy(val);
+      }
+    } catch (e) {
       legacyCopy(val);
     }
   }

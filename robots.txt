@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow hidden or system folders (none in this static site)
+# Disallow: /.git/
+
+Sitemap: http://localhost:5500/sitemap.xml
